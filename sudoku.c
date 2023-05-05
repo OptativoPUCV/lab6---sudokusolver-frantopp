@@ -44,20 +44,29 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-  /*int fila[10];
+  int fila[10];
   int columna[10];
   int matriz[10];
 
   for(int i = 0; i < 9; i++){
+    
     for(int aux = 0; aux < 10; aux++){
       fila[aux] = 0;
       columna[aux] = 0;
       matriz[aux] = 0;
     }
 
+    for(int k = 0; k < 9; k++){
+
+      if(n->sudo[i][k] != 0){
+        if(fila[n->sudo[i][k]] == 1) return 0
+        else fila[n->sudo[i][k]] = 1
+      }
+    }
+
     
     
-  }*/
+  }
     return 1;
 }
 
