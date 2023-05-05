@@ -44,7 +44,7 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-  int fila[10];
+  /*int fila[10];
   int columna[10];
   int matriz[10];
 
@@ -57,7 +57,7 @@ int is_valid(Node* n){
 
     
     
-  }
+  }*/
     return 1;
 }
 
@@ -65,7 +65,7 @@ int is_valid(Node* n){
 List* get_adj_nodes(Node* n){
   List* list=createList();
 
-  /*for(int i = 0; i < 9; i++){
+  for(int i = 0; i < 9; i++){
     for(int j = 0; j < 9; j++){
       if(n->sudo[i][j] == 0 ){
         for(int aux = 1; aux < 10; aux++){
@@ -77,7 +77,7 @@ List* get_adj_nodes(Node* n){
         }
       }
     }
-  }*/
+  }
   return list;
 }
 
