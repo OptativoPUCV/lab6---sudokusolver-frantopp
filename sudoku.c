@@ -62,10 +62,16 @@ int is_valid(Node* n){
         if(fila[n->sudo[i][k]] == 1) return 0
         else fila[n->sudo[i][k]] = 1
       }
+
+      if(n->sudo[k][i] != 0){
+        if(columna[n->sudo[k][i]] == 1) return 0
+        else columna[n->sudo[k][i]] = 1
+      }
+
+      int subMatrizFila = 3*(i/3) + (k/3);
+      int subMatrizColumna = 3*(i%3) + (k%3);
     }
 
-    
-    
   }
     return 1;
 }
