@@ -2,3 +2,20 @@ Fri 05 May 2023 06:23:24 PM UTC:
  tests:  0|5
 total_score: 0/70
 e86e05e
+Fri 05 May 2023 06:27:17 PM UTC: 
+ sudoku.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:49:7: error: variable ‘matriz’ set but not used [-Werror=unused-but-set-variable]
+   49 |   int matriz[10];
+      |       ^~~~~~
+sudoku.c:48:7: error: variable ‘columna’ set but not used [-Werror=unused-but-set-variable]
+   48 |   int columna[10];
+      |       ^~~~~~~
+sudoku.c:47:7: error: variable ‘fila’ set but not used [-Werror=unused-but-set-variable]
+   47 |   int fila[10];
+      |       ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e8d1de0
