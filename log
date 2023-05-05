@@ -165,3 +165,23 @@ Fri 05 May 2023 06:46:26 PM UTC:
  tests:  6|2
 total_score: 45/70
 b7d03e8
+Fri 05 May 2023 06:47:44 PM UTC: 
+ sudoku.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+sudoku.c: In function ‘is_final’:
+sudoku.c:105:8: error: expected expression before ‘int’
+  105 |     if(int i = 0; i < 10; i++){
+      |        ^~~
+sudoku.c:106:10: error: expected expression before ‘int’
+  106 |       if(int j = 0; j < 10; j++){
+      |          ^~~
+sudoku.c:107:20: error: ‘i’ undeclared (first use in this function)
+  107 |         if(n->sudo[i][j]==0) return 0;
+      |                    ^
+sudoku.c:107:20: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:107:23: error: ‘j’ undeclared (first use in this function)
+  107 |         if(n->sudo[i][j]==0) return 0;
+      |                       ^
+Compilation failed
+2e1cebf

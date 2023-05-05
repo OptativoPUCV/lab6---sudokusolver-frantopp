@@ -76,7 +76,6 @@ int is_valid(Node* n){
         else subMatriz[n->sudo[subMatrizFila][subMatrizColumna]] = 1;
       }
     }
-
   }
     return 1;
 }
@@ -103,7 +102,12 @@ List* get_adj_nodes(Node* n){
 
 
 int is_final(Node* n){
-    return 0;
+    if(int i = 0; i < 10; i++){
+      if(int j = 0; j < 10; j++){
+        if(n->sudo[i][j]==0) return 0;
+      }
+    }
+    return 1;
 }
 
 Node* DFS(Node* initial, int* cont){
