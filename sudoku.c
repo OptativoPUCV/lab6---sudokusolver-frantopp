@@ -53,7 +53,7 @@ int is_valid(Node* n){
     for(int aux = 0; aux < 10; aux++){
       fila[aux] = 0;
       columna[aux] = 0;
-      matriz[aux] = 0;
+      subMatriz[aux] = 0;
     }
 
     for(int k = 0; k < 9; k++){
@@ -70,6 +70,11 @@ int is_valid(Node* n){
 
       int subMatrizFila = 3*(i/3) + (k/3);
       int subMatrizColumna = 3*(i%3) + (k%3);
+
+      if(n->sudo[subMatrizFila][subMatrizColumna] != 0){
+        if(subMatriz[n->sudo[subMatrizFila][subMatrizColumna]] == 1) return 0
+        else subMatriz[n->sudo[subMatrizFila][subMatrizColumna]] = 1
+      }
     }
 
   }
